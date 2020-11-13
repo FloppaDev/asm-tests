@@ -1,9 +1,12 @@
 if not exist "bin" mkdir bin
 
-nasm -f win32 hello_world.asm &^
-gcc -m32 hello_world.obj -o bin/hello_world.exe &^
-del hello_world.obj
+nasm -f win32 src/hello_world.asm -o o.obj &^
+gcc -m32 o.obj -o bin/hello_world.exe
 
-nasm -f win32 sum.asm &^
-gcc -m32 sum.obj -o bin/sum.exe &^
-del sum.obj
+nasm -f win32 src/sum.asm -o o.obj &^
+gcc -m32 o.obj -o bin/sum.exe
+
+nasm -f win32 src/loop.asm -o o.obj &^
+gcc -m32 o.obj -o bin/loop.exe
+
+del o.obj
