@@ -3,8 +3,11 @@ global _main
 
   section .text
 _main:
-  mov ecx, 3
+  ; Set loop counter
+  mov ecx, 5
   l1:
+    ; pushing ecx because printf messes with it
+    ; probably not optimal but... ¯\_(ツ)_/¯
     push ecx
     push message
     call _printf

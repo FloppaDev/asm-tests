@@ -3,7 +3,8 @@ global _main
 
   section .text
 _main:
-  mov ecx, 5
+  ; Set loop counter
+  mov ecx, 50
   mov ebx, 0
   l1:
     add ebx, ecx
