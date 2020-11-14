@@ -1,4 +1,4 @@
-global _main
+  global _main
   extern _printf
 
   section .text
@@ -6,9 +6,9 @@ _main:
   ; Set loop counter
   mov ecx, 50
   mov ebx, 0
-  l1:
-    add ebx, ecx
-    loop l1
+l1:
+  add ebx, ecx
+  loop l1
 
   push ebx
   push message
